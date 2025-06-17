@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Dispositivo - CVC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-row {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+    .form-row label {
+      width: 180px;
+      font-weight: bold;
+    }
+    .form-row input[type="text"],
+    .form-row input[type="number"],
+    .form-row input[type="color"],
+    .form-row select,
+    .form-row textarea {
+      flex: 1;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #ccffcc;
+    }
+    .form-row input[type="color"] {
+      background-color: transparent;
+      padding: 0;
+      width: 50px;
+      height: 30px;
+    }
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .checkbox-row input {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro de Dispositivo - CVC</h2>
+    <form>
+      <div class="form-row">
+        <label for="dispositivo">Dispositivo:</label>
+        <input type="text" id="dispositivo" name="dispositivo" value="Cateter venoso central">
+      </div>
+      <div class="form-row">
+        <label for="legenda">Legenda ADEP:</label>
+        <input type="text" id="legenda" name="legenda" value="CVC">
+      </div>
+      <div class="form-row">
+        <label for="corGrafico">Cor gráfico:</label>
+        <input type="color" id="corGrafico" name="corGrafico" value="#ff0000">
+      </div>
+      <div class="form-row">
+        <label for="classificacao">Classificação NIS:</label>
+        <select id="classificacao" name="classificacao">
+          <option>Cateter venoso central</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="qtMax">Qt máx disp ativos:</label>
+        <input type="number" id="qtMax" name="qtMax" value="2">
+      </div>
+      <div class="form-row">
+        <label for="qtAlerta">Qt alerta:</label>
+        <input type="number" id="qtAlerta" name="qtAlerta" value="1">
+      </div>
+      <div class="form-row">
+        <label for="topografia">Topografia:</label>
+        <select id="topografia" name="topografia">
+          <option>Cadastro</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="ligacao">Forma de ligação:</label>
+        <select id="ligacao" name="ligacao">
+          <option>Diretamente</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="permanencia">Permanência:</label>
+        <select id="permanencia" name="permanencia">
+          <option>Indeterminado longa duração</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="curativo">Curativo:</label>
+        <select id="curativo" name="curativo">
+          <option>Troca por tempo</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="estabelecimento">Estabelecimento:</label>
+        <select id="estabelecimento" name="estabelecimento">
+          <option>HSJ - Sociedade Literária e Caritativa Santo Agostinho</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="orientacoes">Orientações:</label>
+        <textarea id="orientacoes" name="orientacoes" rows="3"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="seqGrafico">Seq após gráfico:</label>
+        <input type="number" id="seqGrafico" name="seqGrafico" value="1">
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="situacao" name="situacao" checked>
+        <label for="situacao">Situação ativa</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="motivoRetirada" name="motivoRetirada">
+        <label for="motivoRetirada">Motivo de retirada obrigatório</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="exibirPEPO" name="exibirPEPO" checked>
+        <label for="exibirPEPO">Exibir no PEPO</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="exibirADEP" name="exibirADEP" checked>
+        <label for="exibirADEP">Exibir na ADEP</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="destacarFarmacia" name="destacarFarmacia">
+        <label for="destacarFarmacia">Destacar na Gestão das Prescrições pela Farmácia Clínica</label>
+      </div>
+      <div class="form-row">
+        <label for="avaliacao">Avaliação:</label>
+        <select id="avaliacao" name="avaliacao">
+          <option value="">-- selecione --</option>
+        </select>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="gerarEvolucao" name="gerarEvolucao">
+        <label for="gerarEvolucao">Gerar evolução na Adm do item</label>
+      </div>
+      <div style="text-align: right; margin-top: 20px;">
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
